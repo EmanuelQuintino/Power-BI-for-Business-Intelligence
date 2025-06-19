@@ -27,3 +27,22 @@ Excel.Workbook([Content])
 # get name columns
 Table.ColumnNames(#"ETAPA"){0}
 ```
+
+## TO ORDER MONTH
+
+```m
+Table.AddColumn(Fonte, "Personalizar", each
+    if [Mês] = "Jan" then 1
+    else if [Mês] = "Fev" then 2
+    else if [Mês] = "Mar" then 3
+    else if [Mês] = "Abr" then 4
+    else if [Mês] = "Mai" then 5
+    else if [Mês] = "Jun" then 6
+    else if [Mês] = "Jul" then 7
+    else if [Mês] = "Ago" then 8
+    else if [Mês] = "Set" then 9
+    else if [Mês] = "Out" then 10
+    else if [Mês] = "Nov" then 11
+    else if [Mês] = "Dez" then 12
+    else null)
+```
